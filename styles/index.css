@@ -1,0 +1,163 @@
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+
+  /* variants */
+  --Desaturated-blue-tranparent: hsl(224, 23%, 55%, 0.05);
+  --Bright-blue-transparent: hsl(245, 75%, 70%);
+}
+
+body {
+  /* positioned */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  /* typography, fonts */
+  font-family: "Red Hat Display", sans-serif;
+  /* 500, 700, 900 */
+
+  /* Visual */
+  background-image: url("./../images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-color: var(--Pale-blue);
+}
+
+.card {
+  /* box model */
+  width: 90%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  max-width: 375px;
+
+  /* Visual */
+  background-color: var(--Very-pale-blue);
+}
+
+.card__image {
+  /* box model */
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.card__title {
+  /* typography, font */
+  text-align: center;
+  font-weight: 900;
+}
+
+.card__content {
+  /* box model */
+  margin: 30px auto;
+  width: 80%;
+
+  /* typography, font */
+  text-align: center;
+  font-weight: 500;
+  color: var(--Desaturated-blue);
+
+  /* visual */
+}
+
+.card__plan-container {
+  /* positioned */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  /* box model */
+  border-radius: 8px;
+  padding: 10px;
+  width: 85%;
+  margin: 0 auto;
+
+  /* visual */
+  background-color: var(--Desaturated-blue-tranparent);
+}
+
+.card__plan-image-container {
+  /* pos */
+  display: flex;
+  grid-column: 1 / span 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.plan__price-container {
+  /* pos */
+  grid-column: 2 / span 2;
+}
+
+.plan__price-price {
+  /* box model */
+  margin: 0;
+  margin-bottom: 5px;
+
+  /* typography, fonts */
+  font-weight: 700;
+}
+
+.plan__price-date {
+  /* typography, fonts */
+  color: var(--Desaturated-blue);
+}
+
+.card__plan-change {
+  /* pos */
+  align-self: center;
+
+  /* typography, fonts */
+  color: var(--Bright-blue);
+  font-weight: 700;
+}
+
+.card__plan-change:hover {
+  color: var(--Bright-blue-transparent);
+}
+
+.card__btn-pay {
+  /* box model */
+  width: 90%;
+  display: block;
+  padding: 20px;
+  margin: 30px auto;
+  border-radius: 15px;
+  border: none;
+
+  /* typography, fonts */
+  color: var(--Pale-blue);
+  font-weight: 700;
+
+  /* visual */
+  background-color: var(--Bright-blue);
+  box-shadow: 0px 30px 30px var(--Pale-blue);
+}
+
+.card__btn-pay:hover {
+  background-color: var(--Bright-blue-transparent);
+}
+
+.card__cancel-order {
+  /* box model */
+  margin: 35px auto;
+
+  /* typography, fonts */
+  text-align: center;
+  font-weight: 900;
+  color: var(--Desaturated-blue);
+}
+
+.card__cancel-order:hover {
+  color: var(--Dark-blue);
+}
+
+@media (min-width: 400px) {
+  body {
+    background-image: url("./../images/pattern-background-desktop.svg");
+    background-repeat: repeat-x;
+  }
+}
